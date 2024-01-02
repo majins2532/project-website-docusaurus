@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  app:
+    tty: true
+    stdin_open: true
+    image: majins/docusaurus:1.0.0
+    ports:
+      - "3000:3000" # Expose any necessary ports
+    volumes:
+      - "./app/src:/usr/app/my-website/src:rw"
+      - "./app/docs:/usr/app/my-website/docs:rw"
+      - "./app/blog:/usr/app/my-website/blog:rw"
+      - "./app/static:/usr/app/my-website/static:rw"
+      - "./app/docusaurus.config.ts:/usr/app/my-website/docusaurus.config.ts:rw"
+      - "./app/sidebars.ts:/usr/app/my-website/sidebars.ts:rw"
+      - "./app/versioned_docs:/usr/app/my-website/versioned_docs:rw"
+      - "./app/versioned_sidebars:/usr/app/my-website/versioned_sidebars:rw"
+      - "./app/versions.json:/usr/app/my-website/versions.json:rw"
+      #- "./app/i18n:/usr/app/my-website/i18n:rw"
+    environment:
+      - NODE_ENV=development # Set your desired environment variables
+    command: npx docusaurus start --host 0.0.0.0
