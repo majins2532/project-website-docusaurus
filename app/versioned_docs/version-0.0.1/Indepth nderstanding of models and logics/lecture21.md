@@ -4,6 +4,13 @@ sidebar_label: 'Working with Data files and Demo fileds'
 sidebar_position: 21
 ---
 
+:::note
+💡 ถ้า Demo Data ไม่เท่ากับ True ระบบจะไม่ทำการสร้าง Demo data ให้
+
+![Image1](./assets/21_image1.png)
+
+:::
+
 file data in folder data : property_type.xml
 
 ```xml
