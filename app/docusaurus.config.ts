@@ -68,6 +68,12 @@ const config: Config = {
                     position: 'left',
                     label: 'Learning',
                 },
+                {
+                    type: 'docSidebar',
+                    position: 'left',
+                    sidebarId: 'PythonSidebar',
+                    label: 'Python',
+                },
                 { to: '/blog', label: 'Blog', position: 'left' },
                 {
                     type: 'docsVersionDropdown',
